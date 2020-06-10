@@ -1,0 +1,40 @@
+<?php
+
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+| Aqui se definen las rutas de los views (PUT, PATCH, DELETE, GET,
+| POST tambien pueden ser usadas).
+
+*/
+
+Route::get('/', 'HomeController@index');
+
+Route::get('/dashboard', 'DashboardController@index');
+
+Route::resource('/expense_reports', 'ExpenseReportController')->middleware('auth');
+Route::get('/expense_reports/{id}/confirmDelete', 'ExpenseReportController@confirmDelete' );
+
+Route::get('/expense_reports/{id}/confirmSendMail', 'ExpenseReportController@confirmSendMail' );
+Route::post('/expense_reports/{id}/sendMail', 'ExpenseReportController@sendMail' );
+
+Route::get('/expense_reports/{expense_report}/expenses/create', 'ExpenseController@create' );
+Route::post('/expense_reports/{expense_report}/expenses', 'ExpenseController@store' );
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

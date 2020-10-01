@@ -22,7 +22,6 @@
                 <td><a  href="/expense_reports/{{ $expenseReport->id }}">{{ $expenseReport->title }}</a></td>
                 <td><a class="btn btn-success" href="/expense_reports/{{ $expenseReport->id }}/edit">Edit</a></td>
                 <td><a class="btn btn-danger" href="/expense_reports/{{ $expenseReport->id }}/confirmDelete">Delete</a></td>
-
             </tr>
         @endforeach
         </table>

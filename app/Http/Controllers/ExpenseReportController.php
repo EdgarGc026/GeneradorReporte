@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class ExpenseReportController extends Controller{
-
 /*     public function __construct(){
         $this->middleware('auth');
     }
@@ -30,10 +29,7 @@ class ExpenseReportController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function create(){
-
-
         return view('expenseReport.create');
-
     }
 
     /**

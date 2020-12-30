@@ -7,7 +7,7 @@
     <div class="col">
         <h2>Expenses</h2>
         <table class="table">
-        <p>Te anexo todo lo que se ha gastado en esta actividad</p>
+        <p>Estos son todos los gastos que se han obtenido en el viaje</p>
             @foreach($report->expenses as $expense)
                 <tr>
                     <td>{{$expense->description}}</td>

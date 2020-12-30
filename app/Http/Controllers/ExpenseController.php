@@ -5,6 +5,7 @@ use App\ExpenseReport;
 use App\Expense;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ExpenseController extends Controller
 {
@@ -24,8 +25,10 @@ class ExpenseController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(ExpenseReport $expenseReport){
+
         return view('expense.create', [
-            'report' => $expenseReport
+            'report' => $expenseReport,
+
         ]);
     }
 

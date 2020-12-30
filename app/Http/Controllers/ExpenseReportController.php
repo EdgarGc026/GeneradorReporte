@@ -6,7 +6,7 @@ use App\ExpenseReport;
 use App\Mail\SummaryReport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-
+use Illuminate\Support\Facades\Auth;
 class ExpenseReportController extends Controller{
 
 /*     public function __construct(){
@@ -19,8 +19,10 @@ class ExpenseReportController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function index(){
+        $user = Auth::user();
         return view('expenseReport.index', [
-            'expenseReports' => ExpenseReport::all()
+            'expenseReports' => ExpenseReport::all(),
+            'user' => $user
         ]);
     }
 
@@ -30,10 +32,7 @@ class ExpenseReportController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function create(){
-
-
         return view('expenseReport.create');
-
     }
 
     /**

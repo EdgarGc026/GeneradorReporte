@@ -4,11 +4,11 @@
 
 <div class="row">
     <div class="col">
-        <h1>Send Report</h1>
+        <h1 class="mt-3">Enviando reporte por correo electronico</h1>
     </div>
 </div>
 <div class="col">
-    <div class="row">
+    <div class="row mt-3">
         <a class="btn btn-secondary" href="/expense_reports/">Back</a>
     </div>
 </div>
@@ -26,11 +26,11 @@
         @endif
         <form action="/expense_reports/{{ $report->id}}/sendMail" method="POST">
         @csrf
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Type a email"  value="{{ old('email') }}">
+            <div class="form-group mt-3">
+                <label for="email">Correo electronico:</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Ingresa el corrreo"  value="{{ old('email') }}">
             </div>
-            <button class="btn btn-primary" type="submit">Sen Mail</button>
+            <button class="btn btn-primary" type="submit">Enviar</button>
         </form>
     </div>
 </div>

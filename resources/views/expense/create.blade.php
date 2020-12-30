@@ -4,12 +4,12 @@
 <div class="container">
 <div class="row">
     <div class="col">
-        <h1>New Expense </h1>
+        <h1 class="mb-3">Nuevo Gasto para el Reporte </h1>
     </div>
 </div>
 <div class="col">
-    <div class="row">
-        <a class="btn btn-secondary" href="/expense_reports/{{$report->id}}">Back</a>
+    <div class="row mb-3">
+        <a class="btn btn-secondary " href="/expense_reports/{{$report->id}}">Regresar</a>
     </div>
 </div>
 
@@ -31,11 +31,11 @@
                 <input type="text" class="form-control" id="description" name="description" placeholder="Type a description"  value="{{ old('description') }}">
             </div>
 
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label for="amount">Amount:</label>
                 <input type="text" class="form-control" id="amount" name="amount" placeholder="Type a amount"  value="{{ old('amount') }}">
             </div>
-            <button class="btn btn-primary" type="submit">Submit </button>
+            <button class="btn btn-primary mt-3" type="submit">Submit </button>
         </form>
     </div>
 </div>

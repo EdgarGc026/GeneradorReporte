@@ -14,7 +14,14 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Bienvenido {{ $user->name}}
+                    <section>
+
+                        <div class="container mt-3 ml-2">
+                            <span>Generar el reporte de gastos 👉</span>
+                            <a href="/expense_reports" class="btn btn-primary btn-sm">Expense Reports</a>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
